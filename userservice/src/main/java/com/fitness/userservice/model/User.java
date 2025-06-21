@@ -1,4 +1,5 @@
 package com.fitness.userservice.model;
+
 import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -15,34 +16,24 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "users")
-@Data //Lombok-it will create all getters and setters
+@Table(name="users")
+@Data	//lombok annotation 
 public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.UUID)
 	private String id;
-	@Column(unique=true,nullable=false)
+	@Column(unique=true, nullable=false)
 	private String email;
 	@Column(nullable=false)
 	private String password;
 	private String firstName;
 	private String lastName;
 	@Enumerated(EnumType.STRING)
-	private UserRole role = UserRole.USER;
+	private UserRole role=UserRole.USER;
 	@CreationTimestamp
-	private LocalDateTime createdAt;
+	private LocalDateTime createAt;
 	@UpdateTimestamp
-	private LocalDateTime updatedAt;
-	public void setEmail(String email) {
-		this.email=email;		
-	}
-	public void setPassword(String password) {
-		this.password=password;	
-	}
-	public void setFirstName(String firstName) {
-		this.firstName=firstName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName=lastName;
-	}
+	private LocalDateTime updateAt;
+	
+	
 }
