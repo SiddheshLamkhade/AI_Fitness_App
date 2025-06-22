@@ -17,7 +17,7 @@ import lombok.Data;
 
 @Entity
 @Table(name="users")
-@Data	//lombok annotation 
+@Data	//lombok annotation //not working idk
 public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.UUID)
@@ -31,9 +31,8 @@ public class User {
 	@Enumerated(EnumType.STRING)
 	private UserRole role=UserRole.USER;
 	@CreationTimestamp
-	private LocalDateTime createAt;
+	private LocalDateTime createdAt;
 	@UpdateTimestamp
-	private LocalDateTime updateAt;
-	
+	private LocalDateTime updatedAt;
 	
 }
