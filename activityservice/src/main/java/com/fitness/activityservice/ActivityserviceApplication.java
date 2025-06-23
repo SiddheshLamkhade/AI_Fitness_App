@@ -8,6 +8,7 @@ public class ActivityserviceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ActivityserviceApplication.class, args);
+		System.out.println("This is Activity Service");
 	}
 
 }
