@@ -16,13 +16,23 @@ import com.fitness.activityservice.repository.ActivityRepository;
 public class ActivityService {
 	
 	private final ActivityRepository repo;
+	private final UserValidationService userValidationService;
+	
 	@Autowired  // this is needed to inject the repo
-	public ActivityService(ActivityRepository repo) {
+	public ActivityService(ActivityRepository repo,UserValidationService userValidationService) {
 	        this.repo = repo;
+			this.userValidationService = userValidationService;
 	}
 
 	
 	public ActivityResponse trackActivity(ActivityRequest request) {
+		
+		boolean isValidUser = userValidationService.validateUser(request.getUserId());
+		
+		if (!isValidUser) {
+			throw new RuntimeException("Invalid User: "+request.getUserId());
+		}
+		
 		Activity activity=Activity.builder()
 				.userId(request.getUserId())
 				.type(request.getType())
