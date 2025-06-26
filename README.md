@@ -14,5 +14,7 @@ Steps:
 1. User Service set up
 2. Activity Service set up
 3. Eureka server service set up
-4. Interservice communication Web Client set up
+4. Interservice communication : Synchronous: Web Client Set Up
 5. AI Service set up
+6. Interservice communication : Asynchronous:  Rabbit MQ Set Up with Docker Containerization Installation
+7. 
