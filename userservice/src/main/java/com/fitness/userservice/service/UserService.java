@@ -1,5 +1,7 @@
 package com.fitness.userservice.service;
 
+//import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,7 +10,10 @@ import com.fitness.userservice.dto.UserResponse;
 import com.fitness.userservice.model.User;
 import com.fitness.userservice.repository.UserRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j
 public class UserService {
 	
 	@Autowired
@@ -53,7 +58,7 @@ public class UserService {
 	}
 
 	public Boolean existByUserId(String userId) {
-		
+		log.info("Calling User Validation API",userId);
 		return repo.existsById(userId);
 	}
 	
