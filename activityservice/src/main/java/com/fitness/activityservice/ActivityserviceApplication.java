@@ -10,5 +10,4 @@ public class ActivityserviceApplication {
 		SpringApplication.run(ActivityserviceApplication.class, args);
 		System.out.println("This is Activity Service");
 	}
-
 }
