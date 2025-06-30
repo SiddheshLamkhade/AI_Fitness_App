@@ -17,4 +17,4 @@ Steps:
 4. Interservice communication : Synchronous: Web Client Set Up
 5. AI Service set up
 6. Interservice communication : Asynchronous:  Rabbit MQ Set Up with Docker Containerization Installation
-7. 
+7. Generating AI driven recommendation using gemini api: configured and made use of gemini model api
