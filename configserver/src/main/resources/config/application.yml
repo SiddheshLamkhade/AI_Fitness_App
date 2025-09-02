@@ -1,0 +1,6 @@
+# Shared defaults for all services (keep this file free of spring.profiles.* and server settings)
+# You can add common properties here, e.g. logging levels or timeouts.
+# Example:
+# logging:
+#   level:
+#     root: INFO
