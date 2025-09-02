@@ -1,4 +1,11 @@
 {
     "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    // Ensure Maven projects are imported automatically
+    "java.import.maven.enabled": true,
+    // Fallback source roots to help the Java LS resolve packages in a multi-module layout
+    "java.project.sourcePaths": [
+        "activityservice/src/main/java",
+        "userservice/src/main/java"
+    ]
 }
