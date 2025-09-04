@@ -1,18 +1,14 @@
-**Job Application**
+**AI Fitness Application**
 
 **Development Workflow**
-1. Built three module Company, Jobs, Reviews
-2. Added Database which is H2
-3. Restructuring application to Microservices
-4. Used Docker for pgAdmin and for postgres database.
-5. Successfully used RestTemplate for interservice communication
-6. Successfully replaced RestTemplate with OpenFeign
-7. Config server set up
-8. API Gateway is set up
-9. Done with Rabbit MQ (Asynchronous Communication)
-10. Containerization of microservices is done
-11. 
-
+1. Built three Separate Services UserService , Activity Service and AI Service
+2. Added Eureka Server
+3. Interservice Communication with WebClient(one of the rest clients)
+4. Configured Database (Mongo db)
+5. Async communication with Rabbit MQ (between Activity Service and AI Service)
+6. Integrated Gemini API
+7. Added API GATEWAY (Spring Cloud Routing)
+8. Added React APP for FrontEnd
 
 
 <img width="992" height="510" alt="image" src="https://github.com/user-attachments/assets/93e21f0e-cbc3-469b-8c97-ed6edfbb4f20" />
